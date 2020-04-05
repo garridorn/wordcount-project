@@ -1,0 +1,20 @@
+<h1>COUNT</h1>
+<br />
+<a href = "{% url  'home' %}" > Start Again </a>
+<br />
+<h2>There is {{ length }} words in your comment!!</h2>
+<br />
+<h2>Your words: </h2>
+
+<p> {{ fulltext }} </p>
+
+
+<h2> Word Count </h2>
+
+
+{% for word, counttotal in sortedword %}
+
+{{word}} - {{counttotal}}
+<br />
+
+{% endfor %}
